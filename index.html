@@ -43,8 +43,8 @@
       imageElement.src = ""; // Clear previous image
 
       try {
-        const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`);
-        const data = await response.json();
+        imageElement.src = data.imageUrl;
+      const data = await response.json();
 
         if (data.status === "error") {
           alert("Breed not found! Try another one.");
